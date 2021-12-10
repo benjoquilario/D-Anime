@@ -1,0 +1,21 @@
+{
+   "name": "anime-web",
+   "version": "1.0.0",
+   "description": "Anime Information",
+   "default": "index.html",
+   "scripts": {
+      "start": "parcel index.html",
+      "build": "parcel build index.html --dist-dir ./dist"
+   },
+   "author": "Benjo Quilario",
+   "license": "ISC",
+   "devDependencies": {
+      "@parcel/transformer-sass": "^2.0.1",
+      "parcel": "^2.0.1",
+      "sass": "^1.44.0"
+   },
+   "dependencies": {
+      "core-js": "^3.19.3",
+      "regenerator-runtime": "^0.13.9"
+   }
+}

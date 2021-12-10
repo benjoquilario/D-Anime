@@ -1,0 +1,15 @@
+.footer {
+   margin-top: 24px;
+   background-color: $darkGray;
+   padding: 12px;
+
+   &__attribute {
+      color: #918581;
+      text-align: center;
+      font-size: 12px;
+   }
+
+   .twitter-link {
+      color: $blue;
+   }
+}

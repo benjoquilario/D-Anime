@@ -1,0 +1,46 @@
+html {
+   font-size: 100%;
+   box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+   box-sizing: inherit;
+   padding: 0;
+   margin: 0;
+}
+
+body {
+   background-color: #000;
+   font-family: 'Georama', sans-serif;
+   font-size: 16px;
+   line-height: 1.5;
+}
+
+img {
+   height: auto;
+   max-width: 100%;
+}
+
+ul,
+ol {
+   list-style: none;
+}
+
+a {
+   text-decoration: none;
+}
+
+main {
+   height: 100%;
+   background-color: $darkGray;
+   padding: 0 0.6rem 0.6rem;
+   display: grid;
+   grid-template-columns: 1fr 300px;
+   grid-gap: 14px;
+
+   @media screen and (max-width: 868px) {
+      grid-template-columns: 1fr;
+   }
+}

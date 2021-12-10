@@ -1,0 +1,116 @@
+.header {
+   position: relative;
+   padding: 25px 50px;
+   background-color: #1b1b1b;
+
+   &__container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      @media screen and (max-width: 868px) {
+         flex-direction: column;
+      }
+   }
+
+   .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 50px;
+
+      &__logo {
+         font-size: 24px;
+         font-weight: 700;
+         text-transform: uppercase;
+         letter-spacing: 2px;
+         color: #fff;
+
+         &__d {
+            font-size: 54px;
+            color: $blue;
+         }
+      }
+
+      &__list {
+         display: flex;
+         align-items: center;
+      }
+
+      &__item {
+         position: relative;
+         font-size: 16px;
+
+         &:not(:last-child) {
+            margin-right: 24px;
+         }
+      }
+
+      &__link {
+         position: relative;
+         color: #fff;
+         text-transform: uppercase;
+         font-weight: 500;
+
+         &:hover {
+            color: #0080ff;
+
+            &::before {
+               opacity: 1;
+               visibility: visible;
+               transform: scale(1);
+            }
+         }
+
+         &::before {
+            content: '';
+            position: absolute;
+            bottom: -7px;
+            left: 0;
+            height: 3px;
+            width: 100%;
+            background-color: #0080ff;
+            opacity: 0;
+            visibility: hidden;
+            transform: scale(0) translateY(-12px);
+            transition: all 350ms ease-in-out;
+         }
+      }
+
+      // Search
+      &__search {
+         position: relative;
+         width: 340px;
+
+         .form {
+            &__container {
+               display: flex;
+               align-items: center;
+               border: 1px solid #fff;
+               padding: 14px 10px;
+            }
+
+            &__search {
+               background-color: transparent;
+               outline: none;
+               border: none;
+               color: #fff;
+               width: 100%;
+               font-size: 18px;
+
+               &:focus {
+                  .form {
+                     &__container {
+                        border: 1px solid #0080ff;
+                     }
+                  }
+               }
+            }
+
+            &__button {
+               background-color: transparent;
+            }
+         }
+      }
+   }
+}

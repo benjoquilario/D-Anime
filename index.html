@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Georama:wght@400;500;700&display=swap"
+         rel="stylesheet"
+      />
+      <link
+         rel="stylesheet"
+         href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+         integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+         crossorigin="anonymous"
+      />
+      <link rel="stylesheet" href="./src/scss/style.scss" />
+      <title>D - Anime</title>
+      <script type="module" defer src="./src/js/script.js"></script>
+   </head>
+   <body>
+      <header class="header">
+         <div class="header__container container">
+            <a href="#" target="_blank" class="nav__logo">
+               <span class="nav__logo__d">D</span>ANIME
+            </a>
+            <nav class="nav">
+               <div class="nav__search">
+                  <form class="form">
+                     <div class="form__container">
+                        <input
+                           class="form__search"
+                           placeholder="search"
+                           name="search"
+                           id="search"
+                           type="text"
+                           value
+                           autocomplete="off"
+                        />
+                        <button
+                           class="btn form__button"
+                           type="submit"
+                           aria-label="button search"
+                        >
+                           <i class="fas fa-search"></i>
+                        </button>
+                     </div>
+                  </form>
+               </div>
+            </nav>
+         </div>
+      </header>
+      <main>
+         <div class="result__container container">
+            <h1 class="result__list">ANIME LIST</h1>
+            <ul class="result">
+               <div class="result__background">
+                  <img src="./src/img/tanjiro.png" alt="luffy" />
+                  <div>
+                     <h2 class="result__background__title">Want Anime?</h2>
+                     <p class="result__background__sub-title">
+                        Find your favorite anime
+                     </p>
+                  </div>
+               </div>
+            </ul>
+         </div>
+
+         <div class="top__container container">
+            <h2 class="top__anime">TOP ANIME</h2>
+            <ul class="top__result"></ul>
+         </div>
+      </main>
+
+      <footer class="footer">
+         <div class="footer__attribute">
+            <p class="attribution">
+               © Copyright by
+               <a
+                  class="twitter-link"
+                  target="_blank"
+                  href="https://twitter.com/iam_benjo"
+                  >Benjo Quilario</a
+               >.
+            </p>
+         </div>
+      </footer>
+   </body>
+</html>

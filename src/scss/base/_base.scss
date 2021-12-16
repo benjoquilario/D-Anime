@@ -12,10 +12,13 @@ html {
 }
 
 body {
-   background-color: #000;
+   background-color: var(--veryDarkGray);
    font-family: 'Georama', sans-serif;
    font-size: 16px;
    line-height: 1.5;
+   overflow-x: hidden;
+   transition: background-color 0.4s ease;
+   color: var(--white);
 }
 
 img {
@@ -34,13 +37,13 @@ a {
 
 main {
    height: 100%;
-   background-color: $darkGray;
-   padding: 0 0.6rem 0.6rem;
+   padding: 0px 2rem 0.6rem;
    display: grid;
-   grid-template-columns: 1fr 300px;
+   grid-template-columns: 1.4fr 4fr;
    grid-gap: 14px;
 
    @media screen and (max-width: 868px) {
       grid-template-columns: 1fr;
+      padding: 0px 1rem 0.6rem;
    }
 }

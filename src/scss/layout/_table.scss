@@ -1,0 +1,217 @@
+#content {
+   position: relative;
+   height: 100%;
+   width: 100%;
+   padding: 5px 10px 10px;
+   display: flex;
+   justify-content: center;
+   align-items: flex-start;
+}
+
+.lds-ring {
+   display: inline-block;
+   position: relative;
+   width: 80px;
+   height: 80px;
+   margin-top: 157px;
+   margin-bottom: 40px;
+}
+
+.lds-ring div {
+   box-sizing: border-box;
+   display: block;
+   position: absolute;
+   width: 64px;
+   height: 64px;
+   margin: 8px;
+   border: 8px solid var(--white);
+   border-radius: 50%;
+   animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+   border-color: var(--white) transparent transparent transparent;
+}
+
+.lds-ring div:nth-child(1) {
+   animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+   animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+   animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+   0% {
+      transform: rotate(0deg);
+   }
+   100% {
+      transform: rotate(360deg);
+   }
+}
+
+.content__section {
+   display: flex;
+   transition: 350ms;
+
+   @media screen and (max-width: 768px) {
+      flex-direction: column;
+   }
+}
+
+.left {
+   flex-basis: 220px;
+}
+
+h3 {
+   font-size: 16px;
+}
+.td {
+   &__left {
+      color: var(--white);
+      &__image img {
+         position: relative;
+         height: 300px;
+         object-fit: cover;
+
+         &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: inherit;
+            background-color: var(--blue);
+            display: block;
+         }
+      }
+
+      &__type {
+         color: var(--white);
+      }
+
+      &__text {
+         font-size: 14px;
+         font-weight: 600;
+      }
+
+      &__title {
+         text-align: left;
+         font-size: clamp(17px, 5vw, 23px);
+      }
+
+      &__value {
+         font-size: 14px;
+      }
+
+      &__info {
+         border-top: 1px solid #a1a1a1;
+         margin-top: 20px;
+      }
+   }
+   &__top {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      justify-items: center;
+      align-items: center;
+      grid-template-rows: auto;
+      height: 92px;
+      margin-top: 35px;
+      border: 1px solid #a1a1a1;
+      padding: 0 10px;
+      width: 100%;
+      color: var(--white);
+      text-align: center;
+
+      @media screen and (max-width: 1200px) {
+         grid-template-columns: 100px 1fr;
+         height: 120px;
+      }
+
+      @media screen and (max-width: 769px) {
+         grid-template-columns: 74px 1fr;
+         height: 120px;
+      }
+
+      &__top {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+
+         @media screen and (max-width: 1200px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+         }
+      }
+
+      &__text {
+         font-size: 16px;
+      }
+
+      &__score {
+         position: relative;
+         font-weight: 700;
+         justify-self: center;
+         align-self: center;
+         font-size: clamp(14px, 4vw, 16px);
+
+         .scores {
+            position: relative;
+
+            &__text {
+               width: 60px;
+               text-transform: uppercase;
+               font-size: 12px;
+               z-index: 1;
+               background-color: var(--blue);
+            }
+
+            &__score {
+               font-size: 20px;
+            }
+         }
+      }
+
+      &__rank,
+      &__popularity,
+      &__member {
+         display: flex;
+         justify-content: flex-end;
+         align-self: flex-start;
+         margin: 0 10px;
+      }
+   }
+
+   &__bottom {
+      margin-top: 17px;
+
+      &__title {
+         padding-bottom: 7px;
+         border-bottom: 1px solid #a1a1a1;
+         color: var(--white);
+      }
+   }
+}
+
+.tr {
+   &__right {
+      display: flex;
+      flex-direction: column;
+   }
+}
+
+.genres {
+   display: flex;
+   flex-wrap: wrap;
+
+   li {
+      color: var(--white);
+      font-size: 15px;
+      margin: 0 4px;
+      a {
+         font-size: inherit;
+         color: inherit;
+         text-decoration: underline;
+      }
+   }
+}

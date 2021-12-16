@@ -3,6 +3,7 @@
    "version": "1.0.0",
    "description": "Anime Information",
    "default": "index.html",
+   "browserslist": "> 0.5%, last 2 versions, not dead",
    "scripts": {
       "start": "parcel index.html",
       "build": "parcel build index.html --dist-dir ./dist"
@@ -10,6 +11,8 @@
    "author": "Benjo Quilario",
    "license": "ISC",
    "devDependencies": {
+      "@parcel/babel-plugin-transform-runtime": "^2.0.1",
+      "@parcel/babel-preset-env": "^2.0.1",
       "@parcel/transformer-sass": "^2.0.1",
       "parcel": "^2.0.1",
       "sass": "^1.44.0"

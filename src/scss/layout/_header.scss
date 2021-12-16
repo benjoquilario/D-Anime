@@ -1,34 +1,70 @@
 .header {
    position: relative;
-   padding: 25px 50px;
-   background-color: #1b1b1b;
+   padding: 0px 0px 25px;
 
    &__container {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
+      flex-direction: column;
+   }
 
-      @media screen and (max-width: 868px) {
-         flex-direction: column;
+   .btn {
+      &--mode {
+         grid-area: mode;
+      }
+   }
+   &__list {
+      grid-area: list;
+   }
+
+   &__top {
+      display: flex;
+      justify-content: space-between;
+      background-color: var(--darkGray);
+      box-shadow: 0 4px 8px 4px rgba(49, 49, 49, 0.1);
+      padding: 2rem 2rem;
+
+      @media screen and (max-width: 579px) {
+         padding: 2rem 1rem;
+      }
+
+      &__themes {
+         background-color: transparent;
+      }
+   }
+
+   &__bottom {
+      margin-top: 40px;
+      padding: 0rem 2rem;
+
+      @media screen and (max-width: 579px) {
+         padding: 0rem 1rem;
       }
    }
 
    .nav {
+      grid-area: search;
+      width: 100%;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      height: 50px;
+
+      @media screen and (max-width: 521px) {
+         flex-direction: column;
+         align-items: flex-start;
+         gap: 14px;
+      }
 
       &__logo {
+         grid-area: logo;
          font-size: 24px;
          font-weight: 700;
          text-transform: uppercase;
          letter-spacing: 2px;
-         color: #fff;
+         color: var(--white);
 
          &__d {
             font-size: 54px;
-            color: $blue;
+            color: var(--blue);
          }
       }
 
@@ -48,12 +84,12 @@
 
       &__link {
          position: relative;
-         color: #fff;
+         color: var(--white);
          text-transform: uppercase;
          font-weight: 500;
 
          &:hover {
-            color: #0080ff;
+            color: var(--blue);
 
             &::before {
                opacity: 1;
@@ -69,7 +105,7 @@
             left: 0;
             height: 3px;
             width: 100%;
-            background-color: #0080ff;
+            background-color: var(--blue);
             opacity: 0;
             visibility: hidden;
             transform: scale(0) translateY(-12px);
@@ -79,36 +115,39 @@
 
       // Search
       &__search {
-         position: relative;
-         width: 340px;
-
+         @media screen and (max-width: 521px) {
+            width: 100%;
+         }
          .form {
-            &__container {
-               display: flex;
-               align-items: center;
-               border: 1px solid #fff;
-               padding: 14px 10px;
-            }
+            position: relative;
 
             &__search {
-               background-color: transparent;
+               background-color: var(--darkGray);
                outline: none;
                border: none;
-               color: #fff;
-               width: 100%;
+               color: var(--white);
+               width: 440px;
                font-size: 18px;
+               box-shadow: 0 0 6px 2px rgba(48, 48, 48, 0.1);
+               padding: 0 12px;
+               height: 50px;
+               border-radius: 8px;
 
                &:focus {
-                  .form {
-                     &__container {
-                        border: 1px solid #0080ff;
-                     }
-                  }
+                  outline: 3px solid var(--blue);
+                  outline-offset: 1px;
+               }
+
+               @media screen and (max-width: 521px) {
+                  width: 100%;
                }
             }
 
             &__button {
                background-color: transparent;
+               position: absolute;
+               top: 14px;
+               right: 20px;
             }
          }
       }

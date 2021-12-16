@@ -18,18 +18,20 @@
       />
       <link rel="stylesheet" href="./src/scss/style.scss" />
       <title>D - Anime</title>
-      <script type="module" defer src="./src/js/script.js"></script>
+      <script type="module" defer src="./src/js/controller.js"></script>
    </head>
    <body>
       <header class="header">
          <div class="header__container container">
-            <a href="#" target="_blank" class="nav__logo">
-               <span class="nav__logo__d">D</span>ANIME
-            </a>
-            <nav class="nav">
-               <div class="nav__search">
-                  <form class="form">
-                     <div class="form__container">
+            <div class="header__top">
+               <a href="#" target="_blank" class="nav__logo"> D-ANIME </a>
+               <input type="checkbox" id="toggle" />
+               <label for="toggle"></label>
+            </div>
+            <div class="header__bottom">
+               <nav class="nav">
+                  <div class="nav__search">
+                     <form class="form" id="form">
                         <input
                            class="form__search"
                            placeholder="search"
@@ -46,31 +48,23 @@
                         >
                            <i class="fas fa-search"></i>
                         </button>
-                     </div>
-                  </form>
-               </div>
-            </nav>
+                     </form>
+                  </div>
+               </nav>
+               <div class="header__list"></div>
+            </div>
          </div>
       </header>
-      <main>
-         <div class="result__container container">
-            <h1 class="result__list">ANIME LIST</h1>
-            <ul class="result">
-               <div class="result__background">
-                  <img src="./src/img/tanjiro.png" alt="luffy" />
-                  <div>
-                     <h2 class="result__background__title">Want Anime?</h2>
-                     <p class="result__background__sub-title">
-                        Find your favorite anime
-                     </p>
-                  </div>
-               </div>
-            </ul>
-         </div>
-
+      <main class="container">
          <div class="top__container container">
-            <h2 class="top__anime">TOP ANIME</h2>
+            <h2 class="top__anime" style="color: #fff">POPULAR ANIME</h2>
             <ul class="top__result"></ul>
+            <div class="pagination"></div>
+         </div>
+         <div class="result__container container">
+            <h2 class="result__list" style="color: #fff">ANIME LIST</h2>
+            <!-- <ul class="result"></ul> -->
+            <div id="content"></div>
          </div>
       </main>
 

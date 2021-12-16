@@ -1,7 +1,6 @@
 .footer {
    margin-top: 24px;
-   background-color: $darkGray;
-   padding: 12px;
+   padding: 8px;
 
    &__attribute {
       color: #918581;
@@ -10,6 +9,6 @@
    }
 
    .twitter-link {
-      color: $blue;
+      color: var(--blue);
    }
 }
